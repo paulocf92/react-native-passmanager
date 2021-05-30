@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useTheme } from 'styled-components';
+
 import {
   Container,
   LoginData,
@@ -7,7 +9,7 @@ import {
   Title,
   Email,
   ShowPasswordButton,
-  Icon
+  Icon,
 } from './styles';
 
 interface Props {
@@ -16,12 +18,10 @@ interface Props {
   password: string;
 }
 
-export function LoginDataItem({
-  title,
-  email,
-  password
-}: Props) {
+export function LoginDataItem({ title, email, password }: Props) {
   const [passIsVisible, setPassIsVisible] = useState(false);
+
+  const theme = useTheme();
 
   function handleTogglePassIsVisible() {
     setPassIsVisible(!passIsVisible);
@@ -29,20 +29,20 @@ export function LoginDataItem({
 
   return (
     <Container>
-      {passIsVisible
-        ? <Password>{password}</Password>
-        : (
-          <LoginData>
-            <Title>{title}</Title>
-            <Email>{email}</Email>
-          </LoginData>
-        )
-      }
+      {passIsVisible ? (
+        <Password>{password}</Password>
+      ) : (
+        <LoginData>
+          <Title>{title}</Title>
+          <Email>{email}</Email>
+        </LoginData>
+      )}
 
-      <ShowPasswordButton
-        onPress={handleTogglePassIsVisible}
-      >
-        <Icon name={passIsVisible ? "eye-off" : "eye"} />
+      <ShowPasswordButton onPress={handleTogglePassIsVisible}>
+        <Icon
+          name={passIsVisible ? 'eye-off' : 'eye'}
+          color={theme.colors.default.primary}
+        />
       </ShowPasswordButton>
     </Container>
   );

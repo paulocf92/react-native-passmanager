@@ -2,22 +2,15 @@ import React from 'react';
 import { TextInputProps } from 'react-native';
 import { useTheme } from 'styled-components';
 
-import {
-  Container,
-  Input,
-  Icon
-} from './styles';
+import { Container, Input, Icon } from './styles';
 
 export function SearchBar(props: TextInputProps) {
   const theme = useTheme();
 
   return (
     <Container>
-      <Input
-        {...props}
-        placeholderTextColor='#9883BF'
-      />
-      <Icon name="search" />
+      <Input {...props} placeholderTextColor={theme.colors.default.secondary} />
+      <Icon name='search' color={theme.colors.default.secondary} />
     </Container>
-  )
+  );
 }

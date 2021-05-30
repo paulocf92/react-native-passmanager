@@ -1185,6 +1185,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/poppins/-/poppins-0.1.0.tgz#aae4df9e80d68ec9dc6764e57dc931f1f64016cd"
   integrity sha512-iC8ii7hYyK22N3ivvLyIspLQ0D4dn1mB+llhYnUCr/h/QfwUWyEosq1uWiwNC47yCedsiPiZ99vJSfpYRjBDrA==
 
+"@expo-google-fonts/ubuntu@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/ubuntu/-/ubuntu-0.1.0.tgz#c1002c7cdcca246146518504275f8b8bb8ff3acd"
+  integrity sha512-1ZTeMVPkKOi6US4+NkW9/Ul1wHGL6twZ70JUoWDMNjDMkt6I6ygZWZ9QvF5U89LigJQtSeb4qlaizV/ygTB++w==
+
 "@expo/config-plugins@1.0.32", "@expo/config-plugins@^1.0.18":
   version "1.0.32"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.32.tgz#abf4ab24a1cfd53e824fefdf15f727687491a856"
